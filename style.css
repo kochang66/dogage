@@ -1,0 +1,146 @@
+/* style.css */
+
+/* Reset-ish minimal */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+
+body {
+  font-family: "Helvetica Neue", Arial, "Noto Sans TC", "PingFang TC", sans-serif;
+  background: linear-gradient(180deg, #f6fbff 0%, #ffffff 100%);
+  color: #0f1724;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container that keeps content narrow and centered */
+.container {
+  width: 100%;
+  max-width: 720px;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.title-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emoji {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #06263b;
+}
+
+/* Card: transparent look, soft border, rounded */
+.card {
+  background: rgba(255, 255, 255, 0.65); /* semi-transparent white */
+  border: 1px solid rgba(6, 38, 59, 0.08); /* soft border */
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(8, 24, 40, 0.06);
+}
+
+/* Input row */
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.input-row label {
+  min-width: 150px;
+  font-size: 16px;
+}
+
+.input-row input[type="date"] {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(6, 38, 59, 0.12);
+  background: #fff;
+  font-size: 15px;
+  outline: none;
+}
+
+/* Button */
+.actions {
+  margin-bottom: 16px;
+}
+
+.btn {
+  appearance: none;
+  border: 1.5px solid #1e88ff;
+  background: #ffffff;
+  color: #0b3a66;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 140ms ease, border-color 140ms ease, transform 120ms;
+}
+
+.btn.primary:hover {
+  border-color: #0f62d0;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Result */
+.result {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #092338;
+  min-height: 44px;
+  padding-top: 6px;
+}
+
+/* Bold numeric parts */
+.result strong {
+  font-weight: 800;
+}
+
+/* Footer note */
+.note {
+  margin-top: 12px;
+  text-align: center;
+  color: rgba(6, 38, 59, 0.6);
+  font-size: 13px;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+  .input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-row label {
+    min-width: 0;
+    margin-bottom: 6px;
+  }
+
+  .site-title { font-size: 20px; }
+  .card { padding: 14px; }
+  .btn { width: 100%; }
+}

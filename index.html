@@ -1,0 +1,44 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>妙麗歲數計算機</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="title-wrap" aria-hidden="false">
+      <span class="emoji" aria-hidden="true">🐶</span>
+      <h1 class="site-title">妙麗歲數計算機</h1>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section class="card" aria-labelledby="input-title">
+      <!-- 第一區：輸入區 -->
+      <div class="input-row">
+        <label id="input-title" for="birthday">狗狗的出生日期：</label>
+        <input id="birthday" name="birthday" type="date" inputmode="numeric" />
+      </div>
+
+      <!-- 第二區：按鈕 -->
+      <div class="actions">
+        <button id="calcBtn" class="btn primary" type="button">開始計算</button>
+      </div>
+
+      <!-- 第三區：結果顯示 -->
+      <div id="result" class="result" aria-live="polite">
+        <!-- 預設為空白；JS 會填入下面範本格式 -->
+      </div>
+    </section>
+
+    <footer class="note">
+      <small>結果會儲存在您的瀏覽器（localStorage），下次打開會自動填回並顯示。</small>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
